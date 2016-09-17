@@ -1,0 +1,62 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #4e4e4e;
+}
+
+.header {
+    padding: 10px 20px;
+    height: 30px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+}
+
+.header .form {
+    float: right;
+}
+
+.header .form input {
+    font-family: 'Lato', sans-serif;
+    padding: 4px 4px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+
+.header .form button {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.15);
+    background-color: #60b044;
+    background-image: -webkit-linear-gradient(#8add6d, #60b044);
+    background-image: linear-gradient(#8add6d, #60b044);
+    border-color: #5ca941;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    line-height: 20px;
+    padding: 4px 10px;
+    font-weight: 700;
+}
+
+.graph_canvas {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
