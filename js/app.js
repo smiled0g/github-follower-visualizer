@@ -69,7 +69,7 @@ App.prototype.buildGraph = function(onSuccess) {
         // Add list of followers' id to profile
         profiles[followee_id].followers = followers.map(function(follower){ return follower.login });
         // Update graph
-        this.graph.update(this.graphDataFromProfiles(profiles));
+        this.graph.update(github_id, this.graphDataFromProfiles(profiles));
         console.log(this.graphDataFromProfiles(profiles));
 
         // Fetch followers of the next in queue
@@ -81,6 +81,7 @@ App.prototype.buildGraph = function(onSuccess) {
     this.github.fetchProfile(github_id, function(id, profile_data) {
         profile_data.__rank = 0;
         profiles[profile_data.login] = profile_data;
+        github_id = profile_data.login;
         this.github.fetchFollowers(github_id, handleFetchResult);
     }.bind(this));
 };

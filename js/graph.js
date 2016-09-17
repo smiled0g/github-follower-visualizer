@@ -45,18 +45,17 @@ Graph.prototype.initGraph = function() {
         layout: {
             name: 'breadthfirst',
             directed: true,
-            roots: '#smiled0g',
             padding: 10
         }
     });
 };
 
-Graph.prototype.update = function(elements) {
+Graph.prototype.update = function(root, elements) {
     this.g.json({ elements: elements });
     this.g.layout({
         name: 'breadthfirst',
         directed: true,
-        roots: '#smiled0g',
+        roots: '#'+root,
         padding: 30
     });
 };
